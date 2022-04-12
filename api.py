@@ -57,6 +57,11 @@ class Example(QWidget):
         self.image.resize(250, 250)
         self.image.setPixmap(self.pixmap)
 
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_PageUp:
+            mash += 0.5
+        if event.key() == Qt.Key_PageDown:
+            mash -= 0.5
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
